@@ -16,7 +16,7 @@ if (empty($id)) {
 $pdo=db_connect();
 
 try {
-    $sql = "DELETE FROM books WHERE id = :id";
+    $sql = "DELETE FROM posts WHERE id = :id";
     $stmt = $pdo->prepare($sql);
     $stmt->bindParam(':id', $id);    //メソッドの引数は初期値があるものは未記入でOKーーーーーbindParamは第一引数に第二引数を渡す
     $stmt->execute();    

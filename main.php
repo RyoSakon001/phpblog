@@ -6,7 +6,7 @@ $pdo=db_connect();
 
 try {
     // SQL文の準備
-     $sql="SELECT * FROM books ORDER BY id DESC";
+     $sql="SELECT * FROM posts ORDER BY id DESC";
     // プリペアドステートメントの作成
     $stmt=$pdo->prepare($sql);
     // 実行
@@ -21,27 +21,32 @@ try {
 <head>
     <meta charset="UTF-8">
     <title>メイン</title>
-    <link rel="stylesheet" href="style.css">
-
 </head>
 <body>
-    <h1>在庫一覧画面</h1>
-    <a class="blue button" href="bookSignUp.php">新規登録</a>
-    <a class="gray button" href="logout.php">ログアウト</a>
-    <table border="1">
+    <h1>メインページ</h1>
+    <p>ようこそ<?php echo $_SESSION["user_name"]; ?>さん</p>   <!--requireなどで定義してなくてOK-->
+    <a href="logout.php">ログアウト</a><br />
+    <a href="create_post.php">記事投稿！</a><br />
+    <table>
         <tr>
-            <th>タイトル</th>
-            <th>発売日</th>
-            <th>在庫数</th>
-            <th></th>
+            <td>記事ID</td>
+            <td>タイトル</td>
+            <td>本文</td>
+            <td>投稿日</td>
+            <td>詳細</td>
+            <td>編集</td>
+            <td>削除</td>
         </tr>
         <?php while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) { ?>
-        <tr>
-            <td><?php echo $row['title']; ?></td>
-            <td><?php echo $row['date']; ?></td>
-            <td><?php echo $row['stock']; ?></td>
-            <td><a class="red button" href="delete_book.php?id=<?php echo $row['id']; ?>">削除</a></td>
-        </tr>
+            <tr>
+                <td><?php echo $row['id']; ?></td>
+                <td><?php echo $row['title']; ?></td>
+                <td><?php echo $row['content']; ?></td>
+                <td><?php echo $row['time']; ?></td>
+                <td><a href="detail_post.php?id=<?php echo $row['id']; ?>">詳細</a></td>
+                <td><a href="edit_post.php?id=<?php echo $row['id']; ?>">編集</a></td>
+                <td><a href="delete_post.php?id=<?php echo $row['id']; ?>">削除</a></td>
+            </tr>
         <?php } ?>
     </table>
 </body>
