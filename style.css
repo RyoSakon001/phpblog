@@ -1,0 +1,61 @@
+body {
+    margin: 0;
+}
+a {
+    text-decoration: none;
+}
+
+
+/* formタグで使用 */
+.textbox{
+    height: 30px;
+    width:400px;
+    border-radius: 5px;
+    border:1px solid #aaaaaa;
+    margin-bottom: 20px;
+}
+/* 小さなtextbox */
+.smaller{
+    width:300px !important;
+}
+.top-wrapper{
+    display:flex;
+    align-items: center;
+}
+.top-items{
+    float: left;
+}
+.button{
+    display:inline-block;
+    padding:6px 12px;
+    border-radius: 5px;
+    color:white;
+}
+/* ボタンの位置と種類 */
+.top{
+    margin-left:20px;
+}
+.large{
+    padding:8px 80px !important;
+    margin-top: 20px !important;
+    font-size: larger !important;
+}
+.blue{background-color: #0055ff;}
+.green{background-color: #248b8b;}
+.gray{background-color: #888888;}
+.red{background-color: red;}
+
+table{
+    margin-top: 20px;
+    border-collapse: collapse;
+    border: solid 1px #aaaaaa;
+    text-align: center;
+    width:500px;
+}
+th{
+    height: 50px;
+    background-color: #ccffff;
+}
+td{
+    height:50px;
+}
