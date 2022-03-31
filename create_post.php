@@ -31,8 +31,8 @@ if (!empty($_POST)) {
             $stmt->bindParam(":content",$content);
             // 実行
             $stmt->execute();
-            // main.phpにリダイレクト
-            header("Location:main.php");
+            // index.phpにリダイレクト
+            header("Location:index.php");
         } catch (PDOException $e) {
             // エラーメッセージの出力
             echo $e;

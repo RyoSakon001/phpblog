@@ -38,8 +38,8 @@ if (!empty($_POST)) {
                 // セッションに値を保存（一定の長い期間！どこに？sessionという特別な保存場所、サーバー）
                 $_SESSION["user_id"] = $row['id'];
                 $_SESSION["user_name"] = $row['name'];
-                // main.phpにリダイレクト
-                header("Location: main.php");
+                // index.phpにリダイレクト
+                header("Location: index.php");
                 exit;
             } else {
                 // パスワードが違ってた時の処理

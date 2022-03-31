@@ -10,7 +10,7 @@ check_user_logged_in();
 
 // URLの?以降で渡されるIDをキャッチ
 $id = $_GET['id'];
-// もし、$idが空であったらmain.phpにリダイレクト
+// もし、$idが空であったらindex.phpにリダイレクト
 // 不正なアクセス対策
 redirect_main_unless_parameter($id);
 
