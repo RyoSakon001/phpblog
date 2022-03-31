@@ -40,7 +40,7 @@ die();
 // POSTで渡されたデータがなかった場合
 // GETで渡されたpost_idを受け取る 
 $post_id = $_GET['post_id']; 
-// $post_idが空だった場合は不正な遷移なので、main.phpに戻す
+// $post_idが空だった場合は不正な遷移なので、index.phpに戻す
 redirect_main_unless_parameter($post_id);
 }
 ?>

@@ -14,20 +14,20 @@ function check_user_logged_in() {
 }
 
 /**
- * 引数の値が空だった場合、main.phpにリダイレクトする
+ * 引数の値が空だった場合、index.phpにリダイレクトする
  * @param integer $param
  * @return void
  */
 function redirect_main_unless_parameter($param) {
     if (empty($param)) {
-        header("Location: main.php");
+        header("Location: index.php");
         exit;
     }
 }
 
 /**
  * 引数で与えられたidでpostsテーブルを検索する
- * もし対象のレコードがなければmain.phpに遷移させる
+ * もし対象のレコードがなければindex.phpに遷移させる
  * @param integer $id
  * @return array
  */

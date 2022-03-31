@@ -10,7 +10,7 @@ check_user_logged_in();
 
 // URLの?以降で渡されるIDをキャッチ
 $id = $_GET['id'];
-// もし、$idが空であったらmain.phpにリダイレクト
+// もし、$idが空であったらindex.phpにリダイレクト
 // 不正なアクセス対策
 redirect_main_unless_parameter($id);
 
@@ -60,7 +60,7 @@ try {
             </tr>
         </table>
         <a href="create_comment.php?post_id=<?php echo $id ?>">この記事にコメントする</a><br />
-        <a href="main.php">メインページに戻る</a>
+        <a href="index.php">メインページに戻る</a>
         <div>
         <?php
         // 結果が1行取得できたら

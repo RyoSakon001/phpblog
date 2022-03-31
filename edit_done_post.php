@@ -41,6 +41,6 @@ try {
     <body>
         <h1>編集完了</h1>
         <p>ID: <?php echo $id; ?>を編集しました。</p>
-        <a href="main.php">ホームへ戻る</a>
+        <a href="index.php">ホームへ戻る</a>
     </body>
 </html>
