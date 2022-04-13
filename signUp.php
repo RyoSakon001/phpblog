@@ -5,7 +5,7 @@ if (!empty($_POST["name"]) && !empty($_POST["password"])) {
     try {
         $st = $pdo->prepare("INSERT INTO users(name,password) VALUES(:name,:password) ");
         $st->execute(array(':name'=>$_POST['name'],':password'=>password_hash($_POST['password'], PASSWORD_DEFAULT)));
-        echo "登録が完了しました。<br>";
+        echo "登録が完了しました。<br>";
         echo "<a href='login.php'>ログイン画面</a>";
     } catch (PDOException $e) {
         echo "データベースエラー：".$e;
@@ -22,13 +22,14 @@ if (!empty($_POST["name"]) && !empty($_POST["password"])) {
 </head>
 <body>
     <h1>新規登録</h1>
+    <a href="login.php">ログイン画面</a>
     <form method="POST" action="">
         user:<br>
         <input type="text" name="name" id="name">
         <br>
         password:<br>
         <input type="password" name="password" id="password"><br>
-        <input type="submit" value="submit" id="signUp" name="signUp">
+        <input type="submit" value="登録" id="signUp" name="signUp">
     </form>
 </body>
 </html>

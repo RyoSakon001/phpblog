@@ -60,6 +60,7 @@ if (!empty($_POST)) {
     </head>
     <body>
         <h2>ログイン画面</h2>
+        <a href="signUp.php">新規登録画面</a>
         <form method="post" action="">
             名前：<input type="text" name="name" size="15"><br><br>
             パスワード：<input type="text" name="pass" size="15"><br><br>

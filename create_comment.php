@@ -59,7 +59,7 @@ redirect_main_unless_parameter($post_id);
 <input type="text" name="name"> <br> 
 コメント:<br>
 <input type="text" name="content" style="width:200px;height:100px;"><br> 
-<input type="submit" value="submit">
+<input type="submit" value="登録">
 </form>
 <a href="detail_post.php?id=<?php echo $post_id; ?>">記事詳細に戻る</a>
 </body>
