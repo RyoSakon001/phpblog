@@ -56,7 +56,7 @@ if (!empty($_POST)) {
         <br>
         content:<br>
         <input type="text" name="content" id="content" style="width:200px;height:100px;"><br>
-        <input type="submit" value="submit" id="post" name="post">
+        <input type="submit" value="登録" id="post" name="post">
     </form>
 </body>
 </html>

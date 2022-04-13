@@ -16,6 +16,7 @@ try {
     die();
 }
 ?>
+
 <!doctype html>
 <html>
 <head>
@@ -45,7 +46,7 @@ try {
                 <td><?php echo $row['time']; ?></td>
                 <td><a href="detail_post.php?id=<?php echo $row['id']; ?>">詳細</a></td>
                 <td><a href="edit_post.php?id=<?php echo $row['id']; ?>">編集</a></td>
-                <td><a href="delete_post.php?id=<?php echo $row['id']; ?>">削除</a></td>
+                <td><a href="delete_post.php?id=<?php echo $row['id']; ?>" onclick="return confirm('本当に削除しますか？')">削除</a></td>
             </tr>
         <?php } ?>
     </table>
